@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react';
 import '../Stylesheet/NewProduct.css';
 
 export default function NewProduct() {
@@ -13,7 +12,7 @@ export default function NewProduct() {
         </div>
         <div className="addProductItem">
           <label>Name</label>
-          <input type="text" placeholder="WWE Championship Title" />
+          <input type="text" placeholder="Smart Watch Pro" />
         </div>
         <div className="addProductItem">
           <label>Stock</label>

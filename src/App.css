@@ -1,9 +1,25 @@
 .container {
   display: flex;
   margin-top: 10px;
+  position: relative;
 }
 
 .link {
   text-decoration: none;
   color: inherit;
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .container {
+    margin-top: 5px;
+  }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin-top: 0;
+  }
 }

@@ -1,6 +1,6 @@
 import { Delete, Edit } from '@mui/icons-material';
 import { DataGrid } from '@mui/x-data-grid';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { productRows } from '../../DummyData';
 import '../Stylesheet/ProductList.css';
@@ -54,15 +54,15 @@ export default function ProductList() {
       // eslint-disable-next-line react/display-name
       renderCell: (params) => {
         return (
-          <>
-            <Link to={'/product/' + params.row.id}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', height: '100%' }}>
+            <Link to={'/product/' + params.row.id} style={{ display: 'inline-flex', alignItems: 'center' }}>
               <Edit className="productListEdit" />
             </Link>
             <Delete
               className="productListDelete"
               onClick={() => handleDelete(params.row.id)}
             />
-          </>
+          </div>
         );
       },
     },
@@ -73,8 +73,12 @@ export default function ProductList() {
       <DataGrid
         rows={data}
         columns={columns}
-        pageSize={10}
-        rowsPerPageOptions={[5]}
+        initialState={{
+          pagination: {
+            paginationModel: { pageSize: 10, page: 0 },
+          },
+        }}
+        pageSizeOptions={[5, 10]}
         checkboxSelection
       />
     </div>

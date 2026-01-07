@@ -1,5 +1,13 @@
 .newUser {
   flex: 4;
+  padding: 20px;
+}
+
+.newUserTitle {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .newUserForm {
@@ -23,14 +31,26 @@
 }
 
 .newUserItem > input {
-  height: 20px;
-  padding: 10px;
-  border: 1px solid gray;
-  border-radius: 5px;
+  height: 40px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.newUserItem > input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
 }
 
 .newUserGender > input {
   margin-top: 15px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #007bff;
 }
 
 .newUserGender > label {
@@ -41,7 +61,19 @@
 
 .newUserSelect {
   height: 40px;
-  border-radius: 5px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0 15px;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.3s;
+}
+
+.newUserSelect:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
 }
 
 .newUserButton {
@@ -54,4 +86,36 @@
   border-radius: 10px;
   margin-top: 30px;
   cursor: pointer;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .newUser {
+    flex: 1;
+    padding: 10px;
+  }
+
+  .newUserItem {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .newUserButton {
+    width: 100%;
+  }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+  .newUser {
+    padding: 5px;
+  }
+
+  .newUserItem {
+    margin-top: 5px;
+  }
+
+  .newUserGender > label {
+    font-size: 16px;
+  }
 }

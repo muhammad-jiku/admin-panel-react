@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react';
 import '../Stylesheet/NewUser.css';
 
 export default function NewUser() {
@@ -9,15 +8,15 @@ export default function NewUser() {
       <form className="newUserForm">
         <div className="newUserItem">
           <label>Username</label>
-          <input type="text" placeholder="Randy" />
+          <input type="text" placeholder="sarah.williams" />
         </div>
         <div className="newUserItem">
           <label>Full Name</label>
-          <input type="text" placeholder="Randy Orton" />
+          <input type="text" placeholder="Sarah Williams" />
         </div>
         <div className="newUserItem">
           <label>Email</label>
-          <input type="email" placeholder="randywweorton124@gmail.com" />
+          <input type="email" placeholder="sarah.williams@company.com" />
         </div>
         <div className="newUserItem">
           <label>Password</label>
@@ -25,11 +24,11 @@ export default function NewUser() {
         </div>
         <div className="newUserItem">
           <label>Phone</label>
-          <input type="text" placeholder="+1 113 256 58" />
+          <input type="text" placeholder="+1 234 567 8902" />
         </div>
         <div className="newUserItem">
           <label>Address</label>
-          <input type="text" placeholder="Chicago | USA" />
+          <input type="text" placeholder="New York | USA" />
         </div>
         <div className="newUserItem">
           <label>Gender</label>

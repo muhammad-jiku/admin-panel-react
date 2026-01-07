@@ -1,5 +1,21 @@
 .productList {
   flex: 4;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .productList {
+    padding: 15px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .productList {
+    padding: 10px;
+  }
 }
 
 .productListItem {
@@ -16,14 +32,36 @@
 }
 
 .productListEdit {
-  padding: 10px;
-  color: #3bb077;
+  color: #007bff;
   cursor: pointer;
-  margin-top: 20px;
-  margin-right: 20px;
+  margin-right: 10px;
+  font-size: 20px;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.productListEdit:hover {
+  color: #0056b3;
 }
 
 .productListDelete {
-  color: red;
+  color: #dc3545;
   cursor: pointer;
+  font-size: 20px;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.productListDelete:hover {
+  color: #c82333;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .productList {
+    flex: 1;
+    margin: 10px;
+  }
 }

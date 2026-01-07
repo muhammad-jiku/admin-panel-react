@@ -1,14 +1,14 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import {
-  Add,
-  CalendarToday,
-  LocationSearching,
-  MailOutline,
-  PermIdentity,
-  PhoneAndroid,
-  Publish,
-} from '@mui/icons-material';
-import React from 'react';
+import
+  {
+    Add,
+    CalendarToday,
+    LocationSearching,
+    MailOutline,
+    PermIdentity,
+    PhoneAndroid,
+    Publish,
+  } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 import '../Stylesheet/User.css';
 
@@ -25,39 +25,39 @@ export default function User() {
         <div className="userShow">
           <div className="userShowTop">
             <img
-              src="https://stillrealtous.com/wp-content/uploads/2021/06/edge.jpeg"
+              src="https://randomuser.me/api/portraits/men/32.jpg"
               alt=""
               className="userShowImg"
             />
             <div className="userShowTopTitle">
-              <span className="userShowUsername">EDGE</span>
-              <span className="userShowUserTitle">Professional Wrestler</span>
+              <span className="userShowUsername">John Anderson</span>
+              <span className="userShowUserTitle">Senior Developer</span>
             </div>
           </div>
           <div className="userShowBottom">
-            <span className="userShowTitle">Acoount Details</span>
+            <span className="userShowTitle">Account Details</span>
             <div className="userShowInfo">
               <PermIdentity className="userShowIcon" />
-              <span className="userShowInfoTitle">wweedgeadam925</span>
+              <span className="userShowInfoTitle">john.anderson</span>
             </div>
             <div className="userShowInfo">
               <CalendarToday className="userShowIcon" />
-              <span className="userShowInfoTitle">10.5.1975</span>
+              <span className="userShowInfoTitle">12.08.1990</span>
             </div>
             <span className="userShowTitle">Contact Details</span>
             <div className="userShowInfo">
               <MailOutline className="userShowIcon" />
               <span className="userShowInfoTitle">
-                wweedgeadam925@gmail.com
+                john.anderson@company.com
               </span>
             </div>
             <div className="userShowInfo">
               <PhoneAndroid className="userShowIcon" />
-              <span className="userShowInfoTitle">+1 123 456 78</span>
+              <span className="userShowInfoTitle">+1 234 567 8901</span>
             </div>
             <div className="userShowInfo">
               <LocationSearching className="userShowIcon" />
-              <span className="userShowInfoTitle">NYC | USA</span>
+              <span className="userShowInfoTitle">San Francisco | USA</span>
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@ export default function User() {
                 <label>Username</label>
                 <input
                   type="text"
-                  placeholder="wweedgeadam925"
+                  placeholder="john.anderson"
                   className="userUpdateInput"
                 />
               </div>
@@ -77,7 +77,7 @@ export default function User() {
                 <label>Full Name</label>
                 <input
                   type="text"
-                  placeholder="EDGE"
+                  placeholder="John Anderson"
                   className="userUpdateInput"
                 />
               </div>
@@ -85,7 +85,7 @@ export default function User() {
                 <label>Email</label>
                 <input
                   type="email"
-                  placeholder="wweedgeadam925@gmail.com"
+                  placeholder="john.anderson@company.com"
                   className="userUpdateInput"
                 />
               </div>
@@ -93,7 +93,7 @@ export default function User() {
                 <label>Phone</label>
                 <input
                   type="text"
-                  placeholder="+1 123 456 78"
+                  placeholder="+1 234 567 8901"
                   className="userUpdateInput"
                 />
               </div>
@@ -101,7 +101,7 @@ export default function User() {
                 <label>Address</label>
                 <input
                   type="text"
-                  placeholder="NYC | USA"
+                  placeholder="San Francisco | USA"
                   className="userUpdateInput"
                 />
               </div>
@@ -109,7 +109,7 @@ export default function User() {
             <div className="userUpdateRight">
               <div className="userUpdateUpload">
                 <img
-                  src="https://stillrealtous.com/wp-content/uploads/2021/06/edge.jpeg"
+                  src="https://randomuser.me/api/portraits/men/32.jpg"
                   alt=""
                   className="userUpdateImg"
                 />

@@ -1,8 +1,41 @@
 .home {
   flex: 4;
+  padding: 20px;
+  overflow-x: hidden;
 }
 
 .homeWidgets {
   display: flex;
-  margin: 20px;
+  margin: 20px 0;
+  gap: 0;
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .home {
+    padding: 15px;
+  }
+
+  .homeWidgets {
+    margin: 15px 0;
+  }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .home {
+    flex: 1;
+    padding: 10px;
+  }
+
+  .homeWidgets {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home {
+    padding: 5px;
+  }
 }

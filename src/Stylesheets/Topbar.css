@@ -5,6 +5,7 @@
   position: sticky;
   top: 0;
   z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .topbarWrapper {
@@ -15,16 +16,35 @@
   justify-content: space-between;
 }
 
+.topLeft {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.menuIcon {
+  cursor: pointer;
+  color: #555;
+  transition: color 0.3s;
+}
+
+.menuIcon:hover {
+  color: brown;
+}
+
 .logo {
   font-weight: bold;
   font-size: 30px;
   color: brown;
   cursor: pointer;
+  margin: 0;
+  transition: font-size 0.3s;
 }
 
 .topRight {
   display: flex;
   align-items: center;
+  gap: 5px;
 }
 
 .topbarIconContainer {
@@ -32,14 +52,21 @@
   cursor: pointer;
   margin-right: 10px;
   color: #555;
+  transition: all 0.3s;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.topbarIconContainer:hover {
+  background-color: #f0f0f0;
 }
 
 .topIconBadge {
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   position: absolute;
-  top: -5px;
-  right: 0px;
+  top: 2px;
+  right: 2px;
   background-color: red;
   color: white;
   border-radius: 50%;
@@ -47,6 +74,7 @@
   align-items: center;
   justify-content: center;
   font-size: 10px;
+  font-weight: 600;
 }
 
 .topAvatar {
@@ -54,4 +82,77 @@
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
+  object-fit: cover;
+  border: 2px solid #f0f0f0;
+  transition: all 0.3s;
+}
+
+.topAvatar:hover {
+  border-color: brown;
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .logo {
+    font-size: 24px;
+  }
+
+  .topbarWrapper {
+    padding: 0px 15px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 18px;
+  }
+
+  .topbarWrapper {
+    padding: 0px 10px;
+  }
+
+  .topbarIconContainer {
+    margin-right: 5px;
+    padding: 6px;
+  }
+
+  .topbarIconContainer svg {
+    font-size: 20px;
+  }
+
+  .topAvatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .topIconBadge {
+    width: 14px;
+    height: 14px;
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    font-size: 16px;
+  }
+
+  .logo sup {
+    font-size: 6px !important;
+  }
+
+  .topbarIconContainer {
+    margin-right: 2px;
+    padding: 4px;
+  }
+
+  .topbarIconContainer svg {
+    font-size: 18px;
+  }
+
+  .topAvatar {
+    width: 28px;
+    height: 28px;
+  }
 }

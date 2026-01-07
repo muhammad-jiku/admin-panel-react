@@ -114,10 +114,19 @@
 }
 
 .userUpdateInput {
-  border: none;
+  border: 1px solid #ddd;
   width: 250px;
-  height: 30px;
-  border-bottom: 1px solid gray;
+  height: 40px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s;
+  outline: none;
+}
+
+.userUpdateInput:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
 }
 
 .userUpdateRight {
@@ -151,4 +160,82 @@
   background-color: darkblue;
   color: white;
   font-weight: 600;
+}
+
+/* Tablet Responsive */
+@media screen and (max-width: 1024px) {
+  .userContainer {
+    flex-direction: column;
+  }
+
+  .userUpdate {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .user {
+    flex: 1;
+    padding: 10px;
+  }
+
+  .userTitleContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .userShow,
+  .userUpdate {
+    padding: 15px;
+  }
+
+  .userUpdateForm {
+    flex-direction: column;
+  }
+
+  .userUpdateInput {
+    width: 100%;
+  }
+
+  .userUpdateImg {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+  .user {
+    padding: 5px;
+  }
+
+  .userShow,
+  .userUpdate {
+    padding: 10px;
+  }
+
+  .userShowImg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .userShowTopTitle {
+    margin-left: 10px;
+  }
+
+  .userShowUsername {
+    font-size: 14px;
+  }
+
+  .userUpdateTitle {
+    font-size: 20px;
+  }
+
+  .userUpdateImg {
+    width: 60px;
+    height: 60px;
+  }
 }

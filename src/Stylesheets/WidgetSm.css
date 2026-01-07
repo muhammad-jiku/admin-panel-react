@@ -4,11 +4,14 @@
   box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
   padding: 20px;
   margin-right: 20px;
+  background: white;
+  border-radius: 10px;
 }
 
 .widgetSmTitle {
   font-size: 22px;
   font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .widgetSmImg {
@@ -29,19 +32,28 @@
   align-items: center;
   justify-content: space-between;
   margin: 20px 0px;
+  gap: 10px;
 }
 
 .widgetSmUser {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  overflow: hidden;
 }
 
 .widgetSmUsername {
   font-weight: 600;
+  font-size: 14px;
 }
 
 .widgetSmUserTitle {
   font-weight: 300;
+  font-size: 12px;
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .widgetSmButton {
@@ -53,9 +65,81 @@
   background-color: #eeeef7;
   color: #555;
   cursor: pointer;
+  transition: all 0.3s;
+  font-size: 13px;
+}
+
+.widgetSmButton:hover {
+  background-color: #dddde7;
 }
 
 .widgetSmIcon {
   font-size: 16px !important;
   margin-right: 5px;
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .widgetSm {
+    padding: 15px;
+    margin-right: 15px;
+  }
+
+  .widgetSmTitle {
+    font-size: 20px;
+  }
+
+  .widgetSmImg {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .widgetSm {
+    margin-right: 0;
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+
+  .widgetSmTitle {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .widgetSmListItem {
+    flex-wrap: wrap;
+    margin: 15px 0;
+  }
+
+  .widgetSmImg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .widgetSmButton {
+    width: 100%;
+    justify-content: center;
+    margin-top: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .widgetSmTitle {
+    font-size: 16px;
+  }
+
+  .widgetSmUsername {
+    font-size: 13px;
+  }
+
+  .widgetSmUserTitle {
+    font-size: 11px;
+  }
+
+  .widgetSmImg {
+    width: 30px;
+    height: 30px;
+  }
 }

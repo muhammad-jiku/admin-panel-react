@@ -4,11 +4,49 @@
   background-color: rgb(251, 251, 255);
   position: sticky;
   top: 50px;
+  transition: all 0.3s ease-in-out;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-width: 250px;
+  min-width: 250px;
+}
+
+.sidebar.closed {
+  max-width: 0;
+  min-width: 0;
+  padding: 0;
+  border: none;
+  flex: 0;
+}
+
+.sidebar.closed .sidebarWrapper {
+  display: none;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .sidebarWrapper {
   padding: 20px;
   color: #555;
+}
+
+.sidebar.closed .sidebarWrapper {
+  padding: 20px 10px;
 }
 
 .sidebarMenu {
@@ -18,6 +56,7 @@
 .sidebarTitle {
   font-size: 13px;
   color: rgb(187, 186, 186);
+  transition: all 0.3s;
 }
 
 .sidebarList {
@@ -26,11 +65,13 @@
 }
 
 .sidebarListItem {
-  padding: 5px;
+  padding: 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
   border-radius: 10px;
+  transition: all 0.3s;
+  white-space: nowrap;
 }
 
 .sidebarListItem.active,
@@ -39,6 +80,69 @@
 }
 
 .sidebarIcon {
-  margin-right: 5px;
+  margin-right: 10px;
   font-size: 20px !important;
+  transition: all 0.3s;
+}
+
+.sidebar.closed .sidebarIcon {
+  margin-right: 0;
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .sidebar {
+    max-width: 200px;
+    min-width: 200px;
+  }
+
+  .sidebar.closed {
+    max-width: 0;
+    min-width: 0;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: -250px;
+    z-index: 998;
+    max-width: 250px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .sidebar.closed {
+    left: -250px;
+    max-width: 250px;
+  }
+
+  .sidebarWrapper {
+    padding: 15px;
+  }
+
+  .sidebarListItem {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .sidebarIcon {
+    font-size: 18px !important;
+    margin-right: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sidebarTitle {
+    font-size: 11px;
+  }
+
+  .sidebarListItem {
+    font-size: 12px;
+    padding: 6px;
+  }
 }

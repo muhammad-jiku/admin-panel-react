@@ -1,0 +1,283 @@
+.staffDetail {
+  flex: 4;
+  padding: 20px;
+}
+
+.staffDetailTitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.staffDetailTitle {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+}
+
+.staffDetailContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.staffDetailShow {
+  flex: 1;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.staffDetailUpdate {
+  flex: 2;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.staffDetailShowTop {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.staffDetailShowImg {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.staffDetailShowTopTitle {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.staffDetailShowUsername {
+  font-weight: 600;
+  font-size: 18px;
+  color: #333;
+}
+
+.staffDetailShowUserTitle {
+  font-weight: 400;
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.staffDetailShowBottom {
+  margin-top: 20px;
+}
+
+.staffDetailShowTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #999;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.staffDetailShowTitle:first-child {
+  margin-top: 0;
+}
+
+.staffDetailShowInfo {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  color: #444;
+}
+
+.staffDetailShowIcon {
+  font-size: 18px !important;
+  color: #666;
+}
+
+.staffDetailShowInfoTitle {
+  margin-left: 12px;
+  font-size: 14px;
+}
+
+.staffDetailUpdateTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.staffDetailUpdateForm {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.staffDetailUpdateLeft {
+  flex: 1;
+}
+
+.staffDetailUpdateItem {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.staffDetailUpdateItem > label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+}
+
+.staffDetailUpdateInput {
+  border: 1px solid #ddd;
+  width: 100%;
+  height: 40px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s;
+  outline: none;
+  background-color: white;
+}
+
+.staffDetailUpdateInput:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+select.staffDetailUpdateInput {
+  cursor: pointer;
+}
+
+.staffDetailUpdateRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 200px;
+}
+
+.staffDetailUpdateUpload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.staffDetailUpdateImg {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.staffDetailUpdateIcon {
+  cursor: pointer;
+  color: #007bff;
+  font-size: 28px !important;
+  transition: color 0.3s;
+}
+
+.staffDetailUpdateIcon:hover {
+  color: #0056b3;
+}
+
+.staffDetailUpdateButton {
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.staffDetailUpdateButton:hover {
+  background-color: #0056b3;
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .staffDetail {
+    padding: 15px;
+  }
+
+  .staffDetailContainer {
+    flex-direction: column;
+  }
+
+  .staffDetailTitle {
+    font-size: 24px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .staffDetail {
+    padding: 10px;
+  }
+
+  .staffDetailTitle {
+    font-size: 20px;
+  }
+
+  .staffDetailShow,
+  .staffDetailUpdate {
+    padding: 15px;
+  }
+
+  .staffDetailUpdateForm {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .staffDetailUpdateRight {
+    width: 100%;
+  }
+
+  .staffDetailUpdateImg {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+  .staffDetail {
+    padding: 5px;
+  }
+
+  .staffDetailTitle {
+    font-size: 18px;
+  }
+
+  .staffDetailShow,
+  .staffDetailUpdate {
+    padding: 10px;
+  }
+
+  .staffDetailShowImg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .staffDetailShowUsername {
+    font-size: 16px;
+  }
+
+  .staffDetailUpdateImg {
+    width: 80px;
+    height: 80px;
+  }
+}

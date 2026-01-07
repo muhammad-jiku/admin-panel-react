@@ -1,5 +1,31 @@
 .userList {
   flex: 4;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+.userList > div {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .userList {
+    padding: 15px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .userList {
+    padding: 10px;
+    flex: 1;
+  }
+  
+  .userList > div {
+    min-width: 100%;
+  }
 }
 
 .userListUser {
@@ -16,13 +42,28 @@
 }
 
 .userListEdit {
-  color: #3bb077;
+  color: #007bff;
   cursor: pointer;
-  margin-top: 20px;
-  padding: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.userListEdit:hover {
+  color: #0056b3;
 }
 
 .userListDelete {
-  color: red;
+  color: #dc3545;
   cursor: pointer;
+  font-size: 20px;
+  transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+}
+
+.userListDelete:hover {
+  color: #c82333;
 }

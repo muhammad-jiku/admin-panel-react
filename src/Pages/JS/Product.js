@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import { Publish } from '@material-ui/icons';
-import React from 'react';
+import { Publish } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 import Chart from '../../Components/Chart';
 import { productData } from '../../DummyData';
@@ -27,20 +26,20 @@ function Product() {
         <div className="productTopRight">
           <div className="productInfoTop">
             <img
-              src="https://img.bleacherreport.net/img/images/photos/003/670/171/hi-res-399b6db2301538002718257403bb41a0_crop_north.jpg?1492526553&w=3072&h=2048"
+              src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&h=100&fit=crop"
               alt=""
               className="productInfoImg"
             />
-            <span className="productName">WWE Championship Title</span>
+            <span className="productName">Wireless Bluetooth Headphones</span>
           </div>
           <div className="productInfoBottom">
             <div className="productInfoItem">
               <span className="productInfoKey">id:</span>
-              <span className="productInfoValue">123</span>
+              <span className="productInfoValue">001</span>
             </div>
             <div className="productInfoItem">
               <span className="productInfoKey">sales:</span>
-              <span className="productInfoValue">$123.56</span>
+              <span className="productInfoValue">$2,456.80</span>
             </div>
             <div className="productInfoItem">
               <span className="productInfoKey">active:</span>
@@ -48,7 +47,7 @@ function Product() {
             </div>
             <div className="productInfoItem">
               <span className="productInfoKey">in stock:</span>
-              <span className="productInfoValue">no</span>
+              <span className="productInfoValue">yes</span>
             </div>
           </div>
         </div>
@@ -57,7 +56,7 @@ function Product() {
         <form className="productForm">
           <div className="productFormLeft">
             <label> Product Name </label>
-            <input type="text" placeholder="WWE Championship Title" />
+            <input type="text" placeholder="Wireless Bluetooth Headphones" />
             <label>In Stock</label>
             <select name="inStock" id="inStock">
               <option value="yes">Yes</option>
@@ -72,7 +71,7 @@ function Product() {
           <div className="productFormRight">
             <div className="productUpload">
               <img
-                src="https://img.bleacherreport.net/img/images/photos/003/670/171/hi-res-399b6db2301538002718257403bb41a0_crop_north.jpg?1492526553&w=3072&h=2048"
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&h=200&fit=crop"
                 alt=""
                 className="productUploadImg"
               />
